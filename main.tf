@@ -16,7 +16,7 @@ locals {
 }
 
 module "logs" {
-  source                   = "git::https://github.com/cloudposse/terraform-aws-s3-log-storage.git?ref=tags/0.5.0"
+  source                   = "git::https://github.com/subhash-duplo/terraform-aws-s3-log-storage.git?ref=branch_0.5.0"
   name                     = var.name
   stage                    = var.stage
   namespace                = var.namespace
@@ -28,7 +28,7 @@ module "logs" {
 }
 
 module "default_label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.14.1"
+  source     = "git::https://github.com/subhash-duplo/terraform-null-label.git?ref=branch_0.14.1"
   namespace  = var.namespace
   stage      = var.stage
   name       = var.name
